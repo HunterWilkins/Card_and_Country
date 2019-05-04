@@ -38,11 +38,4 @@ app.post("/submit", function(req, res){
 // Initiate API Server
 app.listen(PORT, function() {
     console.log(`The API Server is now Functional on Port ${PORT}.`);
-    db.Book.create({
-        title: "Mashed Potatoes",
-        authors: "Ronny Jumpfingers",
-        description: "A little goblin runs into a log and dies",
-        image: "https://www.chocolatemoosey.com/wp-content/uploads/2008/11/Garlic-Mashed-Potatoes-For-Two-photo-9748-200x200.jpg",
-        link: "https://github.com/HunterWilkins"
-    });
 });

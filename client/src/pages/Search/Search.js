@@ -21,7 +21,6 @@ class Search extends Component {
         console.log("Value: " + value);
        
         const name = event.target.name;
-        console.log("Name: " + name);
         this.setState({
           [name]: value
         });
@@ -29,7 +28,7 @@ class Search extends Component {
 
       searchBooks = (query) => {
         API.getBooks(query).then(res =>{
-          console.log(res);
+          console.log(res.data);
             this.setState({
               books:res.data.items
         });
@@ -48,7 +47,7 @@ class Search extends Component {
 
       handleFormSubmit = event => {
         event.preventDefault();
-        console.log(this.state.title);
+        console.log(this.state);
         
         this.searchBooks(this.state.bookSearch);
 
